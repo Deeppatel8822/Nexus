@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /?s=
+Disallow: /search/
+
+Sitemap: https://www.nexusglobalexim.in/sitemap.xml
