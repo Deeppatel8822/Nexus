@@ -1,0 +1,3 @@
+import Header from "../../../components/Header";
+import Footer from "../../../components/Footer";
+export default function PackagingPage(){return <><Header/><main className="page-shell"><div className="bc"><a href="/">Home</a> › <a href="/products">Products</a> › <span>Paper Packaging</span></div><section className="sec sec-white"><div className="eyebrow">Paper Packaging</div><h1 className="sec-title">Paper Packaging</h1><p className="sec-desc">Kraft Paper, Kraft Liner and related packaging materials from the existing Nexus catalogue.</p></section></main><Footer/></>}
