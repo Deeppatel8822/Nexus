@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import LegacyNavigationBridge from "@/components/LegacyNavigationBridge";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexusglobalexim.in"),
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body><LegacyNavigationBridge />{children}</body>
     </html>
   );
 }
