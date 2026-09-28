@@ -1,0 +1,2 @@
+import Header from "../../components/Header"; import Footer from "../../components/Footer";
+export default function CertificationsPage(){return <><Header/><main className="page-shell"><div className="bc"><a href="/">Home</a> › <span>Certifications</span></div><section className="sec sec-white"><div className="eyebrow">Certified & compliant</div><h1 className="sec-title">Certified quality. Documented every shipment.</h1></section></main><Footer/></>}
