@@ -34,6 +34,7 @@ function slugToProduct(pathname: string, form: HTMLFormElement) {
     "fenugreek-seeds": "Fenugreek Seeds",
     "mustard-seeds": "Mustard Seeds",
     "paper-packaging": "Paper Packaging",
+    spices: "Spices",
     chemicals: "Chemicals",
   };
   return names[slug] || "";
