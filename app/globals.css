@@ -405,3 +405,154 @@ footer{background:var(--ink);color:#888;padding:52px 48px 24px}.foot-grid{displa
   .hero-inner{padding-bottom:220px}
   .hero h1{color:#163d6b}
 }
+
+
+/* ─── Nexus Liquid Glass UI ────────────────────────────────── */
+/* Inspired by Apple's current Liquid Glass principles: use glass selectively
+   for navigation and key controls, while keeping content surfaces readable. */
+.site-header{
+  background:rgba(255,255,255,.68);
+  border-bottom:1px solid rgba(255,255,255,.72);
+  backdrop-filter:blur(24px) saturate(160%);
+  -webkit-backdrop-filter:blur(24px) saturate(160%);
+  box-shadow:0 8px 30px rgba(20,55,95,.08);
+}
+.site-header::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.08));
+  z-index:-1;
+}
+.nav-links>a,.nav-dd>span{
+  border:1px solid transparent;
+  border-radius:999px;
+  transition:all .22s ease;
+}
+.nav-links>a:hover,.nav-dd>span:hover{
+  background:rgba(255,255,255,.58);
+  border-color:rgba(255,255,255,.9);
+  box-shadow:0 4px 16px rgba(20,55,95,.09),inset 0 1px rgba(255,255,255,.9);
+  transform:translateY(-1px);
+}
+.nav-cta{
+  border:1px solid rgba(255,255,255,.58);
+  border-radius:999px;
+  background:linear-gradient(135deg,rgba(212,90,22,.94),rgba(196,72,10,.84));
+  box-shadow:0 7px 22px rgba(197,78,17,.22),inset 0 1px rgba(255,255,255,.35);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  transition:transform .22s ease,box-shadow .22s ease,background .22s ease;
+}
+.nav-cta:hover{
+  transform:translateY(-2px) scale(1.015);
+  box-shadow:0 11px 28px rgba(197,78,17,.28),inset 0 1px rgba(255,255,255,.5);
+}
+.btn-saffron{
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:999px;
+  background:linear-gradient(135deg,rgba(236,102,24,.96),rgba(205,72,8,.86));
+  box-shadow:0 9px 26px rgba(205,82,14,.22),inset 0 1px rgba(255,255,255,.42);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;
+}
+.btn-saffron:hover{
+  transform:translateY(-2px);
+  filter:saturate(1.08);
+  box-shadow:0 13px 32px rgba(205,82,14,.3),inset 0 1px rgba(255,255,255,.55);
+}
+.btn-ghost-white{
+  border:1px solid rgba(255,255,255,.72);
+  border-radius:999px;
+  background:rgba(255,255,255,.48);
+  box-shadow:0 7px 22px rgba(25,65,105,.08),inset 0 1px rgba(255,255,255,.85);
+  backdrop-filter:blur(18px) saturate(145%);
+  -webkit-backdrop-filter:blur(18px) saturate(145%);
+  transition:transform .22s ease,background .22s ease,box-shadow .22s ease;
+}
+.btn-ghost-white:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.72);
+  box-shadow:0 11px 28px rgba(25,65,105,.12),inset 0 1px rgba(255,255,255,.95);
+}
+.hero-pill{
+  border-color:rgba(255,255,255,.72);
+  background:rgba(255,255,255,.48);
+  box-shadow:0 4px 14px rgba(30,65,100,.06),inset 0 1px rgba(255,255,255,.9);
+  backdrop-filter:blur(14px) saturate(145%);
+  -webkit-backdrop-filter:blur(14px) saturate(145%);
+}
+.hero-stats{
+  background:rgba(255,255,255,.56);
+  border:1px solid rgba(255,255,255,.82);
+  border-radius:24px;
+  padding:22px 26px;
+  box-shadow:0 14px 40px rgba(27,65,105,.1),inset 0 1px rgba(255,255,255,.9);
+  backdrop-filter:blur(22px) saturate(145%);
+  -webkit-backdrop-filter:blur(22px) saturate(145%);
+}
+.hstat:first-child{padding-left:4px}
+.hstat-val{font-size:30px}
+.ind-card,.why-card,.prod-card,.cert-card,.rel-card,.fcard,.contact-block{
+  border-color:rgba(210,222,235,.8);
+  box-shadow:0 8px 28px rgba(22,58,96,.055);
+  transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease;
+}
+.ind-card:hover,.why-card:hover,.prod-card:hover,.cert-card:hover,.rel-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 38px rgba(22,58,96,.11);
+  border-color:rgba(191,211,230,.95);
+}
+.ind-card{
+  border-radius:22px;
+}
+.ind-btn,.pc-btn,.fsub{
+  border-radius:999px;
+  box-shadow:0 7px 18px rgba(22,58,96,.12),inset 0 1px rgba(255,255,255,.28);
+}
+.trust-bar{
+  background:rgba(13,38,67,.94);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+.mobile-nav-panel{
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(28px) saturate(160%);
+  -webkit-backdrop-filter:blur(28px) saturate(160%);
+}
+.mobile-nav-head{
+  border-bottom-color:rgba(205,218,232,.7);
+}
+.mobile-quote-btn{
+  border-radius:999px!important;
+  box-shadow:0 8px 22px rgba(197,78,17,.2),inset 0 1px rgba(255,255,255,.4);
+}
+.nav-menu-btn{
+  border-color:rgba(190,207,224,.8);
+  border-radius:999px;
+  background:rgba(255,255,255,.55);
+  box-shadow:inset 0 1px rgba(255,255,255,.85),0 5px 16px rgba(25,65,105,.07);
+}
+@media(max-width:900px){
+  .site-header{
+    background:rgba(255,255,255,.78);
+  }
+  .hero-stats{
+    border-radius:20px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .nav-links>a,.nav-dd>span,.nav-cta,.btn-saffron,.btn-ghost-white,.ind-card,.why-card,.prod-card,.cert-card,.rel-card{
+    transition:none!important;
+    transform:none!important;
+  }
+}
+@media(prefers-reduced-transparency:reduce){
+  .site-header,.hero-stats,.btn-saffron,.btn-ghost-white,.hero-pill,.mobile-nav-panel{
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+    background:#fff;
+  }
+}
