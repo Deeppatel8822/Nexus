@@ -43,6 +43,20 @@ export default function QuoteRequestForm() {
   );
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    const product = String(data.get("product") || "");
+    const subject = form.querySelector<HTMLInputElement>("#quote-subject");
+    const reply = form.querySelector<HTMLInputElement>("#quote-replyto");
+    const email = String(data.get("email") || "");
+
+    if (subject) {
+      subject.value = product
+        ? `New ${product} Quotation Enquiry | Nexus Global Exim`
+        : "New Website Quotation Enquiry | Nexus Global Exim";
+    }
+    if (reply) reply.value = email;
+
     setSending(true);
   }
 
@@ -89,6 +103,7 @@ export default function QuoteRequestForm() {
 
       <input
         type="hidden"
+        id="quote-subject"
         name="_subject"
         value="New Website Quotation Enquiry | Nexus Global Exim"
       />
