@@ -1,0 +1,2 @@
+import Header from "../../components/Header"; import Footer from "../../components/Footer";
+export default function ProcessPage(){return <><Header/><main className="page-shell"><div className="bc"><a href="/">Home</a> › <span>Export Process</span></div><section className="sec sec-white"><div className="eyebrow">Export Process</div><h1 className="sec-title">Simple, transparent, reliable</h1></section></main><Footer/></>}
