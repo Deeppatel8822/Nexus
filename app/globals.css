@@ -315,3 +315,20 @@ footer{background:var(--ink);color:#888;padding:52px 48px 24px}
 footer{background:var(--ink);color:#888;padding:52px 48px 24px}.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}.foot-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#fff;margin-bottom:10px}.foot-desc{font-size:13px;line-height:1.75;max-width:240px}.foot-col h4{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:14px}.foot-col a{display:block;font-size:13px;color:#666;margin-bottom:9px}.foot-col a:hover{color:#fff}.foot-bottom{border-top:1px solid #2A2A20;padding-top:20px;display:flex;justify-content:space-between;font-size:12px}
 @media(max-width:900px){.site-header{padding:0 20px}.nav-links{display:none}.sec{padding:48px 20px}.foot-grid{grid-template-columns:1fr 1fr}.prod-hero-wrap{padding:16px 20px 0}.bc{padding:10px 20px}}
 @media(max-width:600px){.foot-grid{grid-template-columns:1fr}.foot-bottom{flex-direction:column;gap:8px}}
+
+
+/* Responsive Next.js navigation */
+.header-actions{display:flex;align-items:center;gap:10px}
+.nav-menu-btn{display:none;background:none;border:1px solid var(--border);border-radius:var(--r);padding:6px 10px;font-size:20px;line-height:1;color:var(--ink)}
+.mobile-nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1200}
+.mobile-nav-panel{position:absolute;top:0;right:0;bottom:0;width:min(320px,88vw);background:#fff;padding:20px;overflow-y:auto;box-shadow:-8px 0 28px rgba(0,0,0,.12)}
+.mobile-nav-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--border)}
+.mobile-nav-head .nav-logo{font-size:20px}
+.mobile-product-group{padding:8px 0}
+.mobile-group-label{padding:10px 14px 6px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mobile-product-group a{padding:9px 14px}
+.mobile-quote-btn{margin-top:10px!important;background:var(--spice)!important;color:#fff!important;text-align:center;font-weight:600!important}
+@media(max-width:900px){
+  .header-actions .nav-cta{display:none}
+  .nav-menu-btn{display:block}
+}
