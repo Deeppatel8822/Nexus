@@ -1,9 +1,7 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-export const metadata = {
-  title: "About | Nexus Global Exim"
-};
+export const metadata = { title: "About | Nexus Global Exim" };
 
 export default function Page() {
   return (
