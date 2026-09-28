@@ -1,0 +1,2 @@
+import Header from "../../components/Header"; import Footer from "../../components/Footer";
+export default function QuotePage(){return <><Header/><main className="page-shell"><div className="bc"><a href="/">Home</a> › <span>Request Quote</span></div><section className="sec sec-white"><div className="eyebrow">Get a quote</div><h1 className="sec-title">Request a Quote</h1><p className="sec-desc">The existing Nexus enquiry form will be migrated here and connected to a Vercel-compatible backend.</p></section></main><Footer/></>}
