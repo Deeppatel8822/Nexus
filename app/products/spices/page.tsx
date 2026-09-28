@@ -1,0 +1,3 @@
+import Header from "../../../components/Header";
+import Footer from "../../../components/Footer";
+export default function SpicesPage(){return <><Header/><main className="page-shell"><div className="bc"><a href="/">Home</a> › <a href="/products">Products</a> › <span>Spices</span></div><section className="sec sec-white"><div className="eyebrow">Indian Spices</div><h1 className="sec-title">Indian Spices</h1><p className="sec-desc">Cumin Seeds, Green Cardamom, Turmeric, Black Pepper, Red Chilli, Coriander and other spice products from the existing Nexus catalogue.</p></section></main><Footer/></>}
