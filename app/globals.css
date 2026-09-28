@@ -338,3 +338,70 @@ footer{background:var(--ink);color:#888;padding:52px 48px 24px}.foot-grid{displa
 .honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
 .fsub:disabled{opacity:.65;cursor:wait}
 .form-status{margin-top:12px;padding:10px 12px;border-radius:var(--r);background:var(--jade-lt);color:var(--jade);font-size:13px;text-align:center}
+
+
+/* ─── Light logistics hero redesign ───────────────────────── */
+.hero{
+  background:#f7fbff;
+  min-height:calc(100vh - 62px);
+  padding:72px 48px 54px;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero-bg-pattern,.hero-glow{display:none}
+.hero::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:58%;
+  height:100%;
+  background:
+    linear-gradient(90deg,rgba(247,251,255,1) 0%,rgba(247,251,255,.92) 10%,rgba(247,251,255,.28) 34%,rgba(247,251,255,0) 58%),
+    url("https://res.by56.com/upload/News/2026/1/f04a01cf-a605-464b-8e2a-391897510037.png") center/cover no-repeat;
+  z-index:0;
+  pointer-events:none;
+}
+.hero-inner{max-width:650px;z-index:2}
+.hero-tag{
+  background:#fff3e8;
+  border-color:#ffd5b0;
+  color:#c95714;
+}
+.hero h1{color:#163d6b}
+.hero h1 em{color:#d45a16}
+.hero-sub{color:#40546d}
+.hero-pill{background:rgba(255,255,255,.88);border-color:#d9e3ef;color:#23466f}
+.hero-pill.sp{border-color:#f2c3a6;color:#b94c19}
+.hero-pill.pk{border-color:#b8dfcf;color:#176546}
+.hero-pill.ch{border-color:#b9d0ec;color:#1a4f8c}
+.btn-ghost-white{
+  color:#163d6b;
+  border-color:#b8c9db;
+  background:rgba(255,255,255,.78);
+}
+.btn-ghost-white:hover{border-color:#163d6b;background:#fff}
+.hero-stats{
+  border-top-color:#dbe5ef;
+}
+.hstat-val{color:#c95714}
+.hstat-lbl{color:#64748b}
+@media(max-width:900px){
+  .hero{padding:52px 20px 44px;min-height:auto}
+  .hero::after{
+    width:100%;
+    height:430px;
+    top:auto;
+    bottom:0;
+    background:
+      linear-gradient(180deg,#f7fbff 0%,rgba(247,251,255,.72) 15%,rgba(247,251,255,.08) 48%,rgba(247,251,255,0) 70%),
+      url("https://res.by56.com/upload/News/2026/1/f04a01cf-a605-464b-8e2a-391897510037.png") center/cover no-repeat;
+    opacity:.95;
+  }
+  .hero-inner{padding-bottom:260px}
+}
+@media(max-width:600px){
+  .hero-inner{padding-bottom:220px}
+  .hero h1{color:#163d6b}
+}
