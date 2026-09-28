@@ -1,0 +1,2 @@
+import Header from "../../components/Header"; import Footer from "../../components/Footer";
+export default function ContactPage(){return <><Header/><main className="page-shell"><div className="bc"><a href="/">Home</a> › <span>Contact Us</span></div><section className="sec sec-white"><div className="eyebrow">Get in touch</div><h1 className="sec-title">Request a quote or send an enquiry</h1><p className="sec-desc">The existing enquiry form will be migrated here after the visual/page structure is completed.</p></section></main><Footer/></>}
