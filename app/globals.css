@@ -332,3 +332,9 @@ footer{background:var(--ink);color:#888;padding:52px 48px 24px}.foot-grid{displa
   .header-actions .nav-cta{display:none}
   .nav-menu-btn{display:block}
 }
+
+
+/* Enquiry form feedback and spam protection */
+.honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
+.fsub:disabled{opacity:.65;cursor:wait}
+.form-status{margin-top:12px;padding:10px 12px;border-radius:var(--r);background:var(--jade-lt);color:var(--jade);font-size:13px;text-align:center}
