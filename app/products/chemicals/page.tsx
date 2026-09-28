@@ -1,0 +1,3 @@
+import Header from "../../../components/Header";
+import Footer from "../../../components/Footer";
+export default function ChemicalsPage(){return <><Header/><main className="page-shell"><div className="bc"><a href="/">Home</a> › <a href="/products">Products</a> › <span>Chemicals</span></div><section className="sec sec-white"><div className="eyebrow">Chemical Products</div><h1 className="sec-title">Chemical Products</h1><p className="sec-desc">Industrial and specialty chemical products from the existing Nexus catalogue.</p></section></main><Footer/></>}
