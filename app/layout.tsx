@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import LegacyNavigationBridge from "@/components/LegacyNavigationBridge";
 
-const brandLogo =
-  "https://raw.githubusercontent.com/Deeppatel8822/Nexus/nextjs-migration/Nexus%20Global%20Exim%20Logo_05.png";
+const brandLogo = "/Nexus Global Exim Logo_05.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexusglobalexim.in"),
