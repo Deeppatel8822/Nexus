@@ -17,8 +17,7 @@ const mainLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const logoSrc =
-  "https://raw.githubusercontent.com/Deeppatel8822/Nexus/nextjs-migration/Nexus%20Global%20Exim%20Logo_05.png";
+const logoSrc = "/Nexus Global Exim Logo_05.png";
 
 function Logo({ onClick }: { onClick?: () => void }) {
   return (
