@@ -17,6 +17,21 @@ const mainLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+const logoSrc =
+  "https://raw.githubusercontent.com/Deeppatel8822/Nexus/nextjs-migration/Nexus%20Global%20Exim%20Logo_05.png";
+
+function Logo({ onClick }: { onClick?: () => void }) {
+  return (
+    <Link href="/" onClick={onClick} aria-label="Nexus Global Exim Home">
+      <img
+        src={logoSrc}
+        alt="Nexus Global Exim"
+        style={{ height: "58px", width: "auto", display: "block", maxWidth: "240px", objectFit: "contain" }}
+      />
+    </Link>
+  );
+}
+
 export default function Header() {
   const [open, setOpen] = useState(false);
 
@@ -25,101 +40,66 @@ export default function Header() {
   return (
     <>
       <header className="site-header">
-        <Link className="nav-logo" href="/" onClick={closeMenu}>
-          Nexus <span>Global</span> Exim
-        </Link>
+        <div className="nav-logo">
+          <Logo onClick={closeMenu} />
+        </div>
 
         <nav className="nav-links" aria-label="Main navigation">
           {mainLinks.slice(0, 2).map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
+            <Link key={item.href} href={item.href}>{item.label}</Link>
           ))}
 
           <div className="nav-dd">
             <span>Products ▾</span>
             <div className="dd-panel">
               {productLinks.map((item) => (
-                <Link key={item.href} href={item.href}>
-                  {item.label}
-                </Link>
+                <Link key={item.href} href={item.href}>{item.label}</Link>
               ))}
             </div>
           </div>
 
           {mainLinks.slice(2).map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
+            <Link key={item.href} href={item.href}>{item.label}</Link>
           ))}
         </nav>
 
         <div className="header-actions">
-          <Link className="nav-cta" href="/request-quote">
-            Request Quote
-          </Link>
+          <Link className="nav-cta" href="/request-quote">Request Quote</Link>
           <button
             className="nav-menu-btn"
             type="button"
             aria-label="Open navigation menu"
             aria-expanded={open}
             onClick={() => setOpen(true)}
-          >
-            ☰
-          </button>
+          >☰</button>
         </div>
       </header>
 
       {open && (
         <div className="mobile-nav-overlay" onClick={closeMenu}>
-          <aside
-            className="mobile-nav-panel"
-            aria-label="Mobile navigation"
-            onClick={(event) => event.stopPropagation()}
-          >
+          <aside className="mobile-nav-panel" aria-label="Mobile navigation" onClick={(event) => event.stopPropagation()}>
             <div className="mobile-nav-head">
-              <Link className="nav-logo" href="/" onClick={closeMenu}>
-                Nexus <span>Global</span> Exim
-              </Link>
-              <button
-                className="mob-close"
-                type="button"
-                aria-label="Close navigation menu"
-                onClick={closeMenu}
-              >
-                ×
-              </button>
+              <div className="nav-logo"><Logo onClick={closeMenu} /></div>
+              <button className="mob-close" type="button" aria-label="Close navigation menu" onClick={closeMenu}>×</button>
             </div>
 
             <div className="mob-links">
               {mainLinks.slice(0, 2).map((item) => (
-                <Link key={item.href} href={item.href} onClick={closeMenu}>
-                  {item.label}
-                </Link>
+                <Link key={item.href} href={item.href} onClick={closeMenu}>{item.label}</Link>
               ))}
 
               <div className="mobile-product-group">
                 <div className="mobile-group-label">Products</div>
                 {productLinks.map((item) => (
-                  <Link key={item.href} href={item.href} onClick={closeMenu}>
-                    {item.label}
-                  </Link>
+                  <Link key={item.href} href={item.href} onClick={closeMenu}>{item.label}</Link>
                 ))}
               </div>
 
               {mainLinks.slice(2).map((item) => (
-                <Link key={item.href} href={item.href} onClick={closeMenu}>
-                  {item.label}
-                </Link>
+                <Link key={item.href} href={item.href} onClick={closeMenu}>{item.label}</Link>
               ))}
 
-              <Link
-                className="mobile-quote-btn"
-                href="/request-quote"
-                onClick={closeMenu}
-              >
-                Request Quote
-              </Link>
+              <Link className="mobile-quote-btn" href="/request-quote" onClick={closeMenu}>Request Quote</Link>
             </div>
           </aside>
         </div>
