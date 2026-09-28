@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import LegacyNavigationBridge from "@/components/LegacyNavigationBridge";
 
+const brandLogo =
+  "https://raw.githubusercontent.com/Deeppatel8822/Nexus/nextjs-migration/Nexus%20Global%20Exim%20Logo_05.png";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexusglobalexim.in"),
   title: {
@@ -11,18 +14,52 @@ export const metadata: Metadata = {
   description:
     "Nexus Global Exim is an Indian exporter of spices, paper packaging materials, and chemicals from Ahmedabad, Gujarat.",
   icons: {
-    icon: "/favicon.ico"
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg"
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Nexus Global Exim",
+    title: "Nexus Global Exim | Indian Spices, Packaging & Chemicals Exporter",
+    description:
+      "Indian exporter of spices, paper packaging materials, and chemicals from Ahmedabad, Gujarat.",
+    url: "https://nexusglobalexim.in",
+    images: [{ url: brandLogo, alt: "Nexus Global Exim" }]
+  }
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Nexus Global Exim",
+  url: "https://nexusglobalexim.in",
+  logo: brandLogo,
+  email: "info@nexusglobalexim.in",
+  telephone: "+91-8758988822",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "305, Shreeji Plaza, S.P. Ring Road, Naroda",
+    addressLocality: "Ahmedabad",
+    postalCode: "382330",
+    addressRegion: "Gujarat",
+    addressCountry: "IN"
   }
 };
 
 export default function RootLayout({
   children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body><LegacyNavigationBridge />{children}</body>
+      <body>
+        <LegacyNavigationBridge />
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </body>
     </html>
   );
 }
