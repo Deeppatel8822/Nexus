@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const productLinks = [
   { href: "/products/spices", label: "🌶 Spices" },
@@ -22,10 +23,14 @@ const logoSrc = "/Nexus Global Exim Logo_05.png";
 function Logo({ onClick }: { onClick?: () => void }) {
   return (
     <Link href="/" onClick={onClick} aria-label="Nexus Global Exim Home">
-      <img
+      <Image
         src={logoSrc}
         alt="Nexus Global Exim"
-        style={{ height: "58px", width: "auto", display: "block", maxWidth: "240px", objectFit: "contain" }}
+        width={240}
+        height={58}
+        priority
+        sizes="(max-width: 900px) 180px, 240px"
+        style={{ height: "58px", width: "auto", maxWidth: "240px", objectFit: "contain" }}
       />
     </Link>
   );
