@@ -82,6 +82,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <link rel="preconnect" href="https://res.by56.com" />
+        <link rel="dns-prefetch" href="//res.by56.com" />
+        <link rel="preload" as="image" href="https://res.by56.com/upload/News/2026/1/f04a01cf-a605-464b-8e2a-391897510037.png" fetchPriority="high" />
         <LegacyNavigationBridge />
         {children}
         <script
