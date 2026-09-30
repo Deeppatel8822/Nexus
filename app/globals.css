@@ -412,7 +412,7 @@ footer{background:var(--ink);color:#888;padding:52px 48px 24px}.foot-grid{displa
   .hero-inner{padding-bottom:44px}
 }
 @media(max-width:600px){
-  .hero-inner{padding-bottom:220px}
+  .hero-inner{padding-bottom:44px}
   .hero h1{color:#163d6b}
 }
 
