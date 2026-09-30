@@ -3,8 +3,9 @@ import Footer from "../../components/Footer";
 import EnquiryForm from "../../components/EnquiryForm";
 
 export const metadata = {
-  title: "Contact Us | Nexus Global Exim",
-  description: "Contact Nexus Global Exim for export enquiries, product requirements, CIF and FOB quotations.",
+  title: "Contact Nexus Global Exim",
+  description: "Contact Nexus Global Exim in Ahmedabad for Indian spice, packaging and chemical export enquiries, CIF or FOB quotations and samples.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function Page() {
@@ -17,7 +18,7 @@ export default function Page() {
           <div className="enq-wrap">
             <div className="enq-left">
               <div className="eyebrow gold">Get in touch</div>
-              <h2>Request a quote or send an enquiry</h2>
+              <h1>Request a quote or send an enquiry</h1>
               <p>Send your product requirements and receive a CIF or FOB price within 24 hours. Sample shipments available for first-time buyers.</p>
               <div className="contact-block" style={{ marginTop: 24 }}>
                 <div className="c-row"><div className="c-ico gd">👤</div><div><strong>Deep Patel</strong><br/><span style={{fontSize:12,color:"var(--muted)"}}>Owner & Export Manager</span></div></div>
