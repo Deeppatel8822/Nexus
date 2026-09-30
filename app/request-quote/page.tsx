@@ -3,9 +3,9 @@ import Footer from "../../components/Footer";
 import QuoteRequestForm from "../../components/QuoteRequestForm";
 
 export const metadata = {
-  title: "Request a Quote | Nexus Global Exim",
-  description:
-    "Request an export quotation from Nexus Global Exim by selecting your industry and product.",
+  title: "Request an Export Quote",
+  description: "Request a product-specific export quotation from Nexus Global Exim for Indian spices, paper packaging materials or chemicals.",
+  alternates: { canonical: "/request-quote" },
 };
 
 export default function QuotePage() {
