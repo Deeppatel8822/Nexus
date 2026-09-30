@@ -3,8 +3,10 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Thank You | Nexus Global Exim",
-  description: "Thank you for contacting Nexus Global Exim.",
+  title: "Thank You",
+  description: "Your enquiry has been received by Nexus Global Exim.",
+  alternates: { canonical: "/thank-you" },
+  robots: { index: false, follow: false },
 };
 
 export default function ThankYouPage() {
