@@ -4,15 +4,25 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 const routeMap: Record<string, string> = {
-  home: "/",
-  about: "/about",
-  contact: "/contact",
-  spices: "/products/spices",
-  packaging: "/products/paper-packaging",
-  chemicals: "/products/chemicals",
-  process: "/export-process",
-  certifications: "/certifications",
-  quote: "/request-quote",
+  "home": "/",
+  "about": "/about",
+  "contact": "/request-quote",
+  "spices": "/products/spices",
+  "packaging": "/products/paper-packaging",
+  "chemicals": "/products/chemicals",
+  "process": "/export-process",
+  "certs": "/certifications",
+  "certifications": "/certifications",
+  "quote": "/request-quote",
+  "cumin": "/products/spices/cumin-seeds",
+  "cardamom": "/products/spices/green-cardamom",
+  "pepper": "/products/spices/black-pepper",
+  "turmeric": "/products/spices/turmeric",
+  "chilli": "/products/spices/red-chilli",
+  "coriander": "/products/spices/coriander-seeds",
+  "fennel": "/products/spices/fennel-seeds",
+  "fenugreek": "/products/spices/fenugreek-seeds",
+  "mustard": "/products/spices/mustard-seeds"
 };
 
 function slugToProduct(pathname: string, form: HTMLFormElement) {

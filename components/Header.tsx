@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const productLinks = [
-  { href: "/products/spices", label: "🌶 Spices" },
-  { href: "/products/paper-packaging", label: "📦 Paper Packaging" },
-  { href: "/products/chemicals", label: "⚗️ Chemicals" },
+  { href: "/products/spices", label: "Spices" },
+  { href: "/products/paper-packaging", label: "Paper Packaging" },
+  { href: "/products/chemicals", label: "Chemicals" },
 ];
 
 const mainLinks = [
@@ -54,7 +54,7 @@ export default function Header() {
           ))}
 
           <div className="nav-dd">
-            <span>Products ▾</span>
+            <Link href="/products">Products ▾</Link>
             <div className="dd-panel">
               {productLinks.map((item) => (
                 <Link key={item.href} href={item.href}>{item.label}</Link>

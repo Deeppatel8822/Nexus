@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import LegacyNavigationBridge from "@/components/LegacyNavigationBridge";
 
-const brandLogo = "/Nexus Global Exim Logo_05.png";
+const brandLogo = "/Nexus%20Global%20Exim%20Logo_05.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexusglobalexim.in"),
@@ -12,9 +12,6 @@ export const metadata: Metadata = {
   },
   description:
     "Nexus Global Exim is an Indian exporter of spices, paper packaging materials, and chemicals from Ahmedabad, Gujarat.",
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,
@@ -30,7 +27,6 @@ export const metadata: Metadata = {
     title: "Nexus Global Exim | Indian Spices, Packaging & Chemicals Exporter",
     description:
       "Indian exporter of spices, paper packaging materials, and chemicals from Ahmedabad, Gujarat.",
-    url: "https://nexusglobalexim.in",
     images: [{ url: brandLogo, alt: "Nexus Global Exim" }]
   },
   twitter: {

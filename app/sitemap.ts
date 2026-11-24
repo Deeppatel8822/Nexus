@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/products/spices/fennel-seeds",
     "/products/spices/fenugreek-seeds",
     "/products/spices/mustard-seeds",
-    "/products/spices/paper-packaging",
+    "/products/paper-packaging",
     "/products/chemicals",
     "/export-process",
     "/certifications",
