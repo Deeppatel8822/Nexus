@@ -29,13 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 // ── COLLECT & SANITIZE INPUT ────────────────────────────
 function clean($value) {
-    return htmlspecialchars(strip_tags(trim($value ?? '')), ENT_QUOTES, 'UTF-8');
+    if (!is_string($value)) { return ''; }
+    return substr(strip_tags(trim($value)), 0, 4000);
 }
 
 $productName   = clean($_POST['product_name'] ?? 'General Enquiry');
-$honeypot      = trim($_POST['website_url'] ?? ''); // hidden field — real users leave this blank
+$honeypot      = clean($_POST['website_url'] ?? ''); // hidden field — real users leave this blank
 $buyerEmail    = clean($_POST['Email'] ?? $_POST['email'] ?? '');
 $formFieldsRaw = $_POST['fields'] ?? '{}';
+if (!is_string($formFieldsRaw) || strlen($formFieldsRaw) > 32000) {
+    http_response_code(400); echo json_encode(['success'=>false,'message'=>'Invalid enquiry']); exit;
+}
+$productName = substr(preg_replace('/[\r\n\x00-\x1F\x7F]+/', ' ', $productName), 0, 160);
 
 // ── SPAM CHECK 1: Honeypot ──────────────────────────────
 // Bots tend to auto-fill every input, including hidden ones. Real visitors
@@ -47,7 +52,7 @@ if ($honeypot !== '') {
 }
 
 // ── SPAM CHECK 2: Basic email format validation ─────────
-if ($buyerEmail !== '' && !filter_var($buyerEmail, FILTER_VALIDATE_EMAIL)) {
+if ($buyerEmail === '' || preg_match('/[\r\n]/', $buyerEmail) || !filter_var($buyerEmail, FILTER_VALIDATE_EMAIL)) {
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'Invalid email address']);
     exit;
@@ -65,7 +70,7 @@ if (file_exists($rateLimitFile) && (time() - filemtime($rateLimitFile)) < 30) {
 
 // ── DECODE FORM FIELDS (sent as a JSON string from the frontend) ───────
 $fields = json_decode($formFieldsRaw, true);
-if (!is_array($fields)) { $fields = []; }
+if (!is_array($fields) || count($fields) > 50 || !$fields) { http_response_code(400); echo json_encode(['success'=>false,'message'=>'Invalid enquiry fields']); exit; }
 
 // ── BUILD EMAIL BODY ────────────────────────────────────
 $bodyLines = [];
